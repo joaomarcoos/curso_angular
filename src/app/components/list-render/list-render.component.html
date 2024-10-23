@@ -1,0 +1,8 @@
+<div>
+  <ul *ngFor="let person of people">
+    <li>{{person.name}}</li>
+    <li>{{person.age}}</li>
+    <button (click)="showDetail(person)">Ver</button>
+  </ul>
+  <h3>{{personDetail}}</h3>
+</div>

@@ -5,6 +5,7 @@ import { ParentDataComponent } from './components/parent-data/parent-data.compon
 import { IfRenderComponent } from './components/if-render/if-render.component';
 import { EventosComponent } from "./components/eventos/eventos.component";
 import { EmitterComponent } from "./components/emitter/emitter.component";
+import { ListRenderComponent } from "./components/list-render/list-render.component";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { EmitterComponent } from "./components/emitter/emitter.component";
     ParentDataComponent,
     IfRenderComponent,
     EventosComponent,
-    EmitterComponent
+    EmitterComponent,
+    ListRenderComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
