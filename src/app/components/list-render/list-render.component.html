@@ -1,1 +1,10 @@
-<p>list-render works!</p>
+<div>
+  <ul *ngFor="let person of people">
+    <li>ID: {{person.id}}</li>
+    <li>
+      <a [routerLink]="['/list', person.id]">Nome: {{person.name }} </a>
+    </li>
+    <li>Idade: {{person.age }}</li>
+    <li>Cidade: {{person.city}}</li>
+  </ul>
+</div>

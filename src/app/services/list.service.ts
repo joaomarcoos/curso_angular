@@ -8,11 +8,15 @@ import { Person } from '../Person';
 })
 export class ListService {
 
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:3000/person';
 
   constructor(private http: HttpClient) { }
 
   getAll():Observable<Person[]>{
     return this.http.get<Person[]>(this.apiUrl)
+  }
+
+  getPerson(id: number): Observable<Person>{
+    return this.http.get<Person>(`${this.apiUrl}/${id}`)
   }
 }
