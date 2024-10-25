@@ -6,6 +6,7 @@ import { IfRenderComponent } from './components/if-render/if-render.component';
 import { EventosComponent } from "./components/eventos/eventos.component";
 import { EmitterComponent } from "./components/emitter/emitter.component";
 import { ListRenderComponent } from "./components/list-render/list-render.component";
+import { TwoWayBindgingComponent } from "./components/two-way-bindging/two-way-bindging.component";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { ListRenderComponent } from "./components/list-render/list-render.compon
     IfRenderComponent,
     EventosComponent,
     EmitterComponent,
-    ListRenderComponent
+    ListRenderComponent,
+    TwoWayBindgingComponent,
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

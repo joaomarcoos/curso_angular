@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {Person} from '../../Person';
+import { ListService } from '../../services/list.service';
 
 @Component({
   selector: 'app-list-render',
@@ -11,6 +12,10 @@ import {Person} from '../../Person';
 })
 export class ListRenderComponent {
 
+  constructor(private listService: ListService){
+
+  }
+
   people: Person[] = [
     {
       name: 'João',
@@ -19,6 +24,10 @@ export class ListRenderComponent {
     {
       name: 'Maria',
       age: 28
+    },
+    {
+      name: 'Carlos',
+      age: 25
     }
   ]
 
@@ -26,5 +35,11 @@ export class ListRenderComponent {
 
   showDetail(person: Person): void{
     this.personDetail = `O nome é: ${person.name} e a idade é: ${person.age}`
+  }
+
+  removePerson(person: Person){
+    console.log('removendo');
+
+    this.people = this.listService.remove(this.people, person);
   }
 }
