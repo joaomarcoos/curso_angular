@@ -1,10 +1,44 @@
-<div>
-  <ul *ngFor="let person of people">
-    <li>ID: {{person.id}}</li>
-    <li>
-      <a [routerLink]="['/list', person.id]">Nome: {{person.name }} </a>
-    </li>
-    <li>Idade: {{person.age }}</li>
-    <li>Cidade: {{person.city}}</li>
-  </ul>
+<div class="container">
+  <div class="form-controll">
+    <div class="form-input">
+      <input type="number" name="id" placeholder="Digite o id" [(ngModel)]="newPerson.id">
+    </div>
+
+    <div class="form-input">
+      <input type="text" name="" id="name" placeholder="Digite o nome" [(ngModel)]="newPerson.name">
+    </div>
+
+    <div class="form-input">
+      <input type="number" name="age" placeholder="Digite a idade" [(ngModel)]="newPerson.age">
+    </div>
+
+    <div class="form-input">
+      <input type="text" name="city" placeholder="Digite a cidade" [(ngModel)]="newPerson.city">
+    </div>
+    <button class="btn" (click)="addPerson()">Enviar</button>
+  </div>
+
+  <h2>Lista de Pessoas</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Cidade</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>{{ person.id }}</td>
+        <td>{{ person.name }}</td>
+        <td>{{ person.age }}</td>
+        <td>{{ person.city }}</td>
+        <td>
+          <button (click)="removePerson(person)">Deletar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

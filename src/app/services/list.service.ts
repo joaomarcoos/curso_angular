@@ -12,6 +12,14 @@ export class ListService {
 
   constructor(private http: HttpClient) { }
 
+  addPerson(person: Person): Observable<Person>{
+    return this.http.post<Person>(this.apiUrl, person);
+  }
+
+  remove(id: number){
+    return this.http.delete<Person>(`${this.apiUrl}/${id}`);
+  }
+
   getAll():Observable<Person[]>{
     return this.http.get<Person[]>(this.apiUrl)
   }
