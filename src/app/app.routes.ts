@@ -1,9 +1,15 @@
 import { Routes } from '@angular/router';
-import { ListRenderComponent } from './components/list-render/list-render.component';
-import { ChangeNumberComponent } from './components/change-number/change-number.component';
+import { ArquivoComponent } from './components/arquivo/arquivo.component';
+import { ArquivoTesteComponent } from './components/arquivo-teste/arquivo-teste.component';
 
 export const routes: Routes = [
-  {
-    path:'', component: ChangeNumberComponent
-  }
+    {
+        path: '', redirectTo: 'arquivo', pathMatch: 'full'
+    },
+    {
+        path:'arquivo', component: ArquivoComponent
+    },
+    {
+        path: 'arquivo-teste', component: ArquivoTesteComponent
+    }
 ];

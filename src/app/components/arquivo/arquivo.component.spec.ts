@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IfRenderComponent } from './if-render.component';
+import { ArquivoComponent } from './arquivo.component';
 
-describe('IfRenderComponent', () => {
-  let component: IfRenderComponent;
-  let fixture: ComponentFixture<IfRenderComponent>;
+describe('ArquivoComponent', () => {
+  let component: ArquivoComponent;
+  let fixture: ComponentFixture<ArquivoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IfRenderComponent]
+      imports: [ArquivoComponent]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(IfRenderComponent);
+    
+    fixture = TestBed.createComponent(ArquivoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
